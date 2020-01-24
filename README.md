@@ -12,7 +12,7 @@
   * Protocole défini : interopérabilité des logiciels que vous créez, vous pourrez faire combattre les IA entre elles par exemple
 * Mode manuel, et mode intelligence artificielle
 * Taille carte 15×15×3
-* Nombres de vaisseaux, types de vaisseaux, longUeur des vaisseaux
+* Nombres de vaisseaux, types de vaisseaux, longueur des vaisseaux
   * 1 porte-container 5×2
   * 2 porte-avions 5×1
   * 3 destroyers 4×1
@@ -21,6 +21,7 @@
     * À la destruction, il explose dans un rayon de 3 cases autour de lui, dans sa couche
   * 5 petits sous-marins 3×1
   * 2 mini sous-marins 2×1
+* Un sous-marin peut être placé sur n'importe quelle couche, y compris celle des bateaux
 * Ce document est public, il sera régulièrement mis à jour, proposez une pull request pour l'améliorer (par exemple pour ajouter un lien vers votre dépôt GitHub)
 
 ### À voir plus tard
