@@ -98,3 +98,6 @@ Le client commence, il tire et reçoit ensuite une réponse du serveur, puis le 
   * https://docs.travis-ci.com/user/tutorial/
   * https://docs.travis-ci.com/user/languages/python/
   * https://blog.travis-ci.com/2019-08-07-extensive-python-testing-on-travis-ci
+* Poetry
+  * https://python-poetry.org/
+  * https://python-poetry.org/docs/basic-usage/
