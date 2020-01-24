@@ -92,3 +92,9 @@ Le client commence, il tire et reçoit ensuite une réponse du serveur, puis le 
   * Tout ce site est d'excellente qualité : https://realpython.com/
   * https://docs.python.org/fr/3/library/socketserver.html
   * Tests unitaires : https://realpython.com/python-testing/ (je vous conseille pytest)
+* Markdown
+  * https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf
+* Travis CI
+  * https://docs.travis-ci.com/user/tutorial/
+  * https://docs.travis-ci.com/user/languages/python/
+  * https://blog.travis-ci.com/2019-08-07-extensive-python-testing-on-travis-ci
