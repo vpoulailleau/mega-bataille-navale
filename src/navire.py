@@ -8,6 +8,6 @@ class Navire:
     def test_impact(self, x, y, z):
         pass
 
-    def set_position(self, x, y, z):
+    def set_position(self, x, y, z, sens):
         pass
 

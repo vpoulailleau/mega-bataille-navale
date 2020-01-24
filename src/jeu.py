@@ -9,5 +9,5 @@ class Jeu:
     def recevoir_tir(self, x, y):
         pass
     
-    def placer_navire(self, x, y, z):
+    def placer_navire(self, x, y, z, sens, name):
         pass

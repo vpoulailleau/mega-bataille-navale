@@ -5,5 +5,5 @@ class Carte:
     def check_ship(self, x, y, z):
         pass
 
-    def positionner_navire(self, x, y, z):
+    def positionner_navire(self, x, y, z, sens, name):
         pass
