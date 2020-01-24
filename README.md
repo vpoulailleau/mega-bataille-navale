@@ -61,20 +61,6 @@ Le client envoie au serveur le nom du joueur, le serveur répond ensuite par le 
 | 1              | Longueur du nom de joueur en octets (N) |
 | 2 à (N+1)      | Nom du joueur                           |
 
-#### Positionnement des vaisseaux
-
-Le client envoie au serveur un message par vaisseau pour le placer sur la grille. Le serveur fait ensuite de même avec les vaisseaux adverses. 
-
-| Numéro d'octet | Signification / Valeur                                                                                                    |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| 0              | ID de message, vaut 2                                                                                                     |
-| 1              | Type de vaisseau                                                                                                          |
-| 2              | Numéro du vaisseau (de 1 à N, N étant le nombre de vaisseaux de ce type pour le joueur en cours)                          |
-| 3              | Numéro de la couche de la grille (1 pour les bateaux, 2 pour les sous-marins de surface, 3 pour les sous-marins profonds) |
-| 4              | Abcisse du point de départ (de 1 à 15)                                                                                    |
-| 5              | Ordonnée du point de départ (de 1 à 15)                                                                                   |
-| 6              | Direction pour les autres cases occupées par le vaisseau (1 pour le nord, 2 pour l'est, 3 pour le sud, 4 pour l'ouest)    |
-
 #### Tirs
 
 Le client commence, il tire et reçoit ensuite une réponse du serveur, puis le serveur tire et reçoit une réponse du client. À la fin de cette séquence de 4 messages, on décide du vainqueur (ou de continuer la partie s'il reste des bateaux)
@@ -83,7 +69,7 @@ Le client commence, il tire et reçoit ensuite une réponse du serveur, puis le 
 
 | Numéro d'octet | Signification / Valeur |
 | -------------- | ---------------------- |
-| 0              | ID de message, vaut 3  |
+| 0              | ID de message, vaut 2  |
 | 1              | Abcisse (de 1 à 15)    |
 | 2              | Ordonnée (de 1 à 15)   |
 
@@ -91,7 +77,7 @@ Le client commence, il tire et reçoit ensuite une réponse du serveur, puis le 
 
 | Numéro d'octet | Signification / Valeur                                                                                                                   |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| 0              | ID de message, vaut 4                                                                                                                    |
+| 0              | ID de message, vaut 3                                                                                                                    |
 | 1              | Résultat du tir (0 pour dans l'eau, 1 pour touché un bateau, 2 pour touché un sous-marin de surface, 3 pour touché un sous-marin profond |
 
 ### Liens internet
