@@ -6,32 +6,31 @@
   * Inspiré de la bataille navale classique
   * 3 niveaux de grille superposées : les bateaux, les sous-marins de surface, les sous-marins profonds
   * Un missile tire à la verticale et s'arrête au premier obstacle
+    * On est prévenu de la couche de l'impact (exemple : touché à la couche des sous-marins de surface)
 * En réseau (TCP/IP)
-  * Un joueur par PC
-  * Protocole défini : interopérabilité des logiciels que vous créez
+  * Un joueur ou IA par PC
+  * Protocole défini : interopérabilité des logiciels que vous créez, vous pourrez faire combattre les IA entre elles par exemple
 * Mode manuel, et mode intelligence artificielle
-* Autres règles supplémentaires à discuter
-  * Taille carte 15*15
-  * Ce document est public, il sera régulièrement mis à jour, proposez une pull request pour l'améliorer (par exemple pour ajouter un lien vers votre dépôt GitHub)
-  * Nombre de vaisseaux, types de vaisseaux, longeur des vaisseaux
-    * 1 Porte-container 5*2
-    * 2 Porte-avion 5*1
-    * 3 Destroyer 4*1
-    * 3 Torpilleur 3*2
-    * 2 Sous-marin nucléaire 6*1
-      * À la destruction, il explose 3 cases autour, dans sa couche
-    * 5 Petit sous-marin 3*1
-    * 2 Mini sous-marin 2*1
- * En cas d'impact par un missile, on est prévenu de la couche touchée
+* Taille carte 15×15×3
+* NombreS de vaisseaux, types de vaisseaux, longUeur des vaisseaux
+  * 1 porte-container 5×2
+  * 2 porte-avions 5×1
+  * 3 destroyers 4×1
+  * 3 torpilleurs 3×2
+  * 2 sous-marins nucléaires 6×1
+    * À la destruction, il explose dans un rayon de 3 cases autour de lui, dans sa couche
+  * 5 petits sous-marins 3×1
+  * 2 mini sous-marins 2×1
+* Ce document est public, il sera régulièrement mis à jour, proposez une pull request pour l'améliorer (par exemple pour ajouter un lien vers votre dépôt GitHub)
 
 ### À voir plus tard
 
-  * Missiles puissants (à acheter, ou dispo en aléatoire)
-  * Déplacement des bateaux et sous-marins
-  * Boucliers anti-missiles
-  * Intervention extra-terrestre
-  * Gestion du carburant
-  * …
+* Missiles puissants (à acheter, ou dispo en aléatoire)
+* Déplacement des bateaux et sous-marins
+* Boucliers anti-missiles
+* Intervention extra-terrestre
+* Gestion du carburant
+* …
 
 ## Contraintes
 
@@ -63,3 +62,4 @@ TBD
 * Python
   * Tout ce site est d'excellente qualité : https://realpython.com/
   * https://docs.python.org/fr/3/library/socketserver.html
+  * Tests unitaires : https://realpython.com/python-testing/ (je vous conseille pytest)
