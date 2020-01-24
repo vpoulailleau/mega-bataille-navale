@@ -77,12 +77,22 @@ Le client envoie au serveur un message par vaisseau pour le placer sur la grille
 
 #### Tirs
 
-Le client commence, il tire et reçoit ensuite une réponse du serveur, puis le serveur tire et reçoit une réponse du client.
+Le client commence, il tire et reçoit ensuite une réponse du serveur, puis le serveur tire et reçoit une réponse du client. À la fin de cette séquence de 4 messages, on décide du vainqueur (ou de continuer la partie s'il reste des bâteaux)
 
 ##### Lancé de missile
 
+| Numéro d'octet | Signification / Valeur |
+| -------------- | ---------------------- |
+| 0              | ID de message, vaut 3  |
+| 1              | Abcisse (de 1 à 15)    |
+| 2              | Ordonnée (de 1 à 15)   |
+
 ##### Réponse au lancé
 
+| Numéro d'octet | Signification / Valeur                                                                                                                   |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| 0              | ID de message, vaut 4                                                                                                                    |
+| 1              | Résultat du tir (0 pour dans l'eau, 1 pour touché un bâteau, 2 pour touché un sous-marin de surface, 3 pour touché un sous-marin profond |
 
 ### Liens internet
 
