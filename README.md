@@ -11,7 +11,7 @@
   * Protocole défini : interopérabilité des logiciels que vous créez
 * Mode manuel, et mode intelligence artificielle
 * Autres règles supplémentaires à discuter
-  * Je vais mettre ce document sur GitHub, il sera régulièrement mis à jour, proposez une pull request pour l'améliorer (par exemple pour ajouter un lien vers votre dépôt GitHub)
+  * Ce document est public, il sera régulièrement mis à jour, proposez une pull request pour l'améliorer (par exemple pour ajouter un lien vers votre dépôt GitHub)
   * Nombre de vaisseaux, types de vaisseaux, longeur des vaisseaux
   * Missiles puissants (à acheter, ou dispo en aléatoire)
   * Déplacement des bateaux et sous-marins
@@ -41,4 +41,12 @@ TBD
 
 ### Liens internet
 
-TBD
+* Qt
+  * Licence LGPLv3 ou GPLv3 ou commerciale
+  * https://doc.qt.io/qtforpython/
+  * https://doc.qt.io/qtforpython/quickstart.html
+  * Je ne vous conseille pas QtQuick/QML qui necessite du JavaScript, sauf si vous savez ce que vous faites
+  * https://doc.qt.io/qtforpython/tutorials/index.html
+* Python
+  * Tout ce site est d'excellente qualité : https://realpython.com/
+  * https://docs.python.org/fr/3/library/socketserver.html
