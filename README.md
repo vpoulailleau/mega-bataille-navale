@@ -12,7 +12,7 @@
   * Protocole défini : interopérabilité des logiciels que vous créez, vous pourrez faire combattre les IA entre elles par exemple
 * Mode manuel, et mode intelligence artificielle
 * Taille carte 15×15×3
-* NombreS de vaisseaux, types de vaisseaux, longUeur des vaisseaux
+* Nombres de vaisseaux, types de vaisseaux, longUeur des vaisseaux
   * 1 porte-container 5×2
   * 2 porte-avions 5×1
   * 3 destroyers 4×1
@@ -49,7 +49,19 @@
 
 ### Protocole réseau
 
-TBD
+Le protocole est ici décrit en octets. L'encodage des chaînes de caractères est UTF-8.
+
+#### Connexion
+
+Le client envoie au serveur le nom du joueur, le serveur répond ensuite par le nom de l'adversaire.
+
+| Numéro d'octet | Signification / Valeur                  |
+| -------------- | --------------------------------------- |
+| 0              | ID de message, vaut 1                   |
+| 1              | Longueur du nom de joueur en octets (N) |
+| 2 à (N+1)      | Nom du joueur                           |
+
+
 
 ### Liens internet
 
