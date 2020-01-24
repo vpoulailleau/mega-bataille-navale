@@ -80,6 +80,7 @@ Le client commence, il tire et reçoit ensuite une réponse du serveur, puis le 
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | 0              | ID de message, vaut 3                                                                                                                    |
 | 1              | Résultat du tir (0 pour dans l'eau, 1 pour touché un bateau, 2 pour touché un sous-marin de surface, 3 pour touché un sous-marin profond |
+| 2              | 0 pour non-coulé, 1 pour coulé                                                                                                           |
 
 ### Liens internet
 
