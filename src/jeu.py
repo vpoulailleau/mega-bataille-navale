@@ -13,7 +13,12 @@ class Jeu:
         pass
 
     def recevoir_tir(self, x, y):
-        pass
+        etage = 0
+        etat_tir = False
+        while not etat_tir and etage < 3:
+            etat_tir = self.carte_perso.check_ship(x, y, etage)
+            etage += 1
+        return (etat_tir, etage)
 
     def parse_message(self, trame):
         if trame[0] == 2:
@@ -21,4 +26,4 @@ class Jeu:
             x = trame[1]
             y = trame[2]
             return (x,y)
-            
+
