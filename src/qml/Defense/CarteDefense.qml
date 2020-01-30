@@ -30,4 +30,19 @@ ColumnLayout{
             }
         }
     }
+    Keys.onPressed: {
+        if (event.key == Qt.Key_1 || event.key == 38) {
+            stacklayout.currentIndex = 0
+            event.accepted = true;
+        }
+        else if (event.key == Qt.Key_2 || event.key == 201) {
+            event.accepted = true;
+            stacklayout.currentIndex = 1
+        }
+        else if (event.key == Qt.Key_3 || event.key == 34) {
+            stacklayout.currentIndex = 2
+            event.accepted = true;
+        }
+        console.log(stacklayout.currentIndex)
+    }
 }
