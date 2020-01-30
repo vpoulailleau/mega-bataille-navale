@@ -9,7 +9,6 @@ class Carte:
             if navire.test_impact(x, y, z):
                 return True
         return False
-
-
+        
     def positionner_navire(self, x, y, z, sens, name):
         pass
