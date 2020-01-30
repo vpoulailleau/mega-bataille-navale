@@ -33,7 +33,7 @@ ColumnLayout{
 
             Image{
                 id : img
-                source : "Images/close.png"
+                source : "../Images/close.png"
                 sourceSize.width : 22
                 sourceSize.height : 22
                 Layout.alignment : Qt.AlignHCenter | Qt.AlignVCenter
