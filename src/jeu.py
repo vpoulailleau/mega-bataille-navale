@@ -8,9 +8,6 @@ class Jeu(QObject):
         self.carte_perso = Carte()
         self.carte_adversaire = Carte()
     
-    def recevoir_tir(self, x, y):
-        pass
-    
     def placer_navire(self, x, y, z, sens, name):
         pass
 
@@ -48,3 +45,20 @@ class Jeu(QObject):
     @Slot(int, result = bool)
     def get_case_manque(index):
         return True
+    def recevoir_tir(self, x, y):
+        etage = 0
+        etat_tir = False
+        while not etat_tir and etage < 3:
+            etat_tir = self.carte_perso.check_ship(x, y, etage)
+            etage += 1
+        self.tir_subit().emit()
+        return (etat_tir, etage)
+
+    def parse_message(self, trame):
+        if trame[0] == 2:
+            # Reception d'un tir
+            x = trame[1]
+            y = trame[2]
+            return (x,y)
+        else:
+            return (None, None)
