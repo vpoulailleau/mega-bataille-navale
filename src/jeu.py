@@ -23,4 +23,5 @@ class Jeu:
             x = trame[1]
             y = trame[2]
             return (x,y)
-
+        else:
+            return (None, None)
