@@ -34,22 +34,6 @@ ApplicationWindow {
             focus : true
         }
 
-        RowLayout{
-            SpinBox{
-                id :mySspine
-
-            }
-            Button{
-                text: "FIRE !"
-                onClicked:{
-                    Jeu.subire_attaque(mySspine.value)
-                    carteDef.focus = true
-                }
-            }
-            Button{
-                text : "coucou"
-                onClicked: Jeu.tir_fr()
-            }
-        }           
+        RowLayout{}           
     }           
 }
