@@ -8,6 +8,7 @@ import "Defense"
 
 ApplicationWindow {
     visible: true
+    
     minimumWidth : mainLayout.implicitWidth
     minimumHeight : mainLayout.implicitHeight
 
@@ -29,10 +30,26 @@ ApplicationWindow {
         RowLayout{}
 
         CarteDefense{
-             focus : true
+            id : carteDef
+            focus : true
         }
 
-        RowLayout{}                        
-    }
-            
+        RowLayout{
+            SpinBox{
+                id :mySspine
+
+            }
+            Button{
+                text: "FIRE !"
+                onClicked:{
+                    Jeu.subire_attaque(mySspine.value)
+                    carteDef.focus = true
+                }
+            }
+            Button{
+                text : "coucou"
+                onClicked: Jeu.tir_fr()
+            }
+        }           
+    }           
 }

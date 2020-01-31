@@ -2,12 +2,19 @@ import QtQuick.Layouts 1.14
 import QtQuick 2.14
 
 ColumnLayout{
-    property bool touche: num % 5
-    property bool navire: false
     property int num
-
+    property int depth
+    property bool touche: false
+    property bool navire: false
     Layout.fillWidth : true
-    
+
+    Connections {
+        target : Jeu
+        onTir_subit:{
+            touche = Jeu.get_defense_touche(num, depth)
+        }
+    }
+
     Rectangle {
         id : rect
         height : 35
@@ -31,7 +38,7 @@ ColumnLayout{
             }
             
         }
-        MouseArea{
+        MouseArea {
             id : mouseA
             anchors.fill : parent
             acceptedButtons: Qt.LeftButton | Qt.RightButton
@@ -43,7 +50,7 @@ ColumnLayout{
                 if(mouse.button  == Qt.RightButton){
                     touche = !touche
                 }
-                console.log(num)
+                console.log("index: " + num + " depth : " + depth)
             }
         }
     }
