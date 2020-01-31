@@ -1,8 +1,11 @@
-import pytest
+import sys
+
+sys.path.insert(1, 'src')
+
 from jeu import *
 
 def test_recevoir_tir(self):
-    jeu = Jeu()
+    jeu = src.Jeu()
     assert jeu.recevoir_tir(-50, 20) == False
     assert jeu.recevoir_tir(-50, -20) == False
     assert jeu.recevoir_tir(50, 20) == False
@@ -13,7 +16,7 @@ def test_recevoir_tir(self):
     assert jeu.recevoir_tir(4, 5) == False
     assert jeu.recevoir_tir(a, b) == False
     assert jeu.recevoir_tir(11, 5) == True
-    
+
 def test_parse_message(self):
     jeu = Jeu()
     trame = []
