@@ -10,9 +10,9 @@ class Jeu:
         pass
 
     def recevoir_tir(self, x, y):
-        etage = 0
+        etage = 1
         etat_tir = False
-        while not etat_tir and etage < 3:
+        while not etat_tir and etage < 4:
             etat_tir = self.carte_perso.check_ship(x, y, etage)
             etage += 1
         return (etat_tir, etage)
