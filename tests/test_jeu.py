@@ -6,6 +6,7 @@ from jeu import *
 
 def test_recevoir_tir():
     jeu = Jeu()
+
     navire = Navire(3, 1, "AlainBernard")
     jeu.carte_perso.navires.append(navire)
     jeu.carte_perso.navires[0].cases.append(Case(11, 5, 1))
