@@ -1,20 +1,20 @@
 from carte import *
 
 class Jeu:
-    
+
     def __init__(self):
         self.carte_perso = Carte()
         self.carte_adversaire = Carte()
-    
+
     def placer_navire(self, x, y, z, sens, name):
         pass
 
     def recevoir_tir(self, x, y):
-        etage = 1
+        etage = 0
         etat_tir = False
-        while not etat_tir and etage < 4:
-            etat_tir = self.carte_perso.check_ship(x, y, etage)
+        while not etat_tir and etage < 3:
             etage += 1
+            etat_tir = self.carte_perso.check_ship(x, y, etage)
         return (etat_tir, etage)
 
     def parse_message(self, trame):
