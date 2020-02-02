@@ -26,53 +26,59 @@ def test_recevoir_tir():
 
 def test_parse_message():
     jeu = Jeu()
+
     trame = []
     trame.append(2)
     trame.append(1)
     trame.append(5)
-    assert jeu.parse_message(trame) == True
+    assert jeu.parse_message(trame) == (1, 5)
+
+    # Bad Message ID
     trame1 = []
     trame1.append(0)
     trame1.append(1)
     trame1.append(1)
-    assert jeu.parse_message(trame1) == False
+    assert jeu.parse_message(trame1) == (None, None)
+
     trame2 = []
     trame2.append(2)
     trame2.append(0)
     trame2.append(5)
-    assert jeu.parse_message(trame2) == False
+    assert jeu.parse_message(trame2) == (0, 5)
+
     trame3 = []
     trame3.append(2)
     trame3.append(5)
     trame3.append(17)
-    assert jeu.parse_message(trame3) == False
+    assert jeu.parse_message(trame3) == (5, 17)
+ 
     trame4 = []
     trame4.append(2)
     trame4.append(18)
     trame4.append(0)
-    assert jeu.parse_message(trame4) == False
+    assert jeu.parse_message(trame4) == (18, 0)
+
+    # Negative message ID
     trame5 = []
     trame5.append(-5)
     trame5.append(18)
     trame5.append(0)
-    assert jeu.parse_message(trame5) == False
+    assert jeu.parse_message(trame5) == (None, None)
+
     trame6 = []
     trame6.append(2)
     trame6.append(-5)
     trame6.append(15)
-    assert jeu.parse_message(trame6) == False
-    trame7 = []
-    trame7.append(2)
-    trame7.append(-5)
-    trame7.append(15)
-    assert jeu.parse_message(trame7) == False
+    assert jeu.parse_message(trame6) == (-5, 15)
+
     trame8 = []
     trame8.append(2.0)
     trame8.append(2.5)
     trame8.append(5.5)
-    assert jeu.parse_message(trame8) == False
-    trame9 = []
-    trame9.append(a)
-    trame9.append(5)
-    trame9.append(b)
-    assert jeu.parse_message(trame9) == False
+    assert jeu.parse_message(trame8) == (2.5, 5.5)
+
+    #trame9 = []
+    #trame9.append(a)
+    #trame9.append(5)
+    #trame9.append(b)
+    #assert jeu.parse_message(trame9) == False
