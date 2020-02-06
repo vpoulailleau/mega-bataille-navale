@@ -1,10 +1,15 @@
 import sys
 
-sys.path.insert(1, 'src')
+sys.path.insert(1, "src")
 
-from jeu import *
+from jeu import Jeu
+from carte import Carte
+from navire import Navire
+from case import Case
+
 
 def test_recevoir_tir():
+    """Test de la fonction recevoir un tir."""
     jeu = Jeu()
 
     navire = Navire(3, 1, "AlainBernard")
@@ -13,18 +18,21 @@ def test_recevoir_tir():
     jeu.carte_perso.navires[0].cases.append(Case(10, 5, 1))
     jeu.carte_perso.navires[0].cases.append(Case(9, 5, 1))
 
-    #assert jeu.recevoir_tir(-50, 20) == (False, 1)
-    #assert jeu.recevoir_tir(-50, -20) == False
-    assert jeu.recevoir_tir(50, 20)[0] == False
-    #assert jeu.recevoir_tir(50, -20) == False
-    #assert jeu.recevoir_tir(5.5, 2.3) == False
-    #assert jeu.recevoir_tir(-5.5, -2.3) == False
+    navire1 = Navire(4, 1, "HollandaisVolant")
+    jeu.carte_perso.navires.append(navire1)
+    jeu.carte_perso.navires[1].cases.append(Case(1, 7, 2))
+    jeu.carte_perso.navires[1].cases.append(Case(2, 7, 2))
+    jeu.carte_perso.navires[1].cases.append(Case(3, 7, 2))
+    jeu.carte_perso.navires[1].cases.append(Case(4, 7, 2))
+
     assert jeu.recevoir_tir(0, 0)[0] == False
     assert jeu.recevoir_tir(4, 5)[0] == False
-    #assert jeu.recevoir_tir(a, b) == False
     assert jeu.recevoir_tir(11, 5) == (True, 1)
+    assert jeu.recevoir_tir(4, 7) == (True, 2)
+
 
 def test_parse_message():
+    """Test de la fonction parse_message."""
     jeu = Jeu()
 
     trame = []
@@ -33,7 +41,7 @@ def test_parse_message():
     trame.append(5)
     assert jeu.parse_message(trame) == (1, 5)
 
-    # Bad Message ID
+    #  Bad Message ID
     trame1 = []
     trame1.append(0)
     trame1.append(1)
@@ -51,14 +59,14 @@ def test_parse_message():
     trame3.append(5)
     trame3.append(17)
     assert jeu.parse_message(trame3) == (5, 17)
- 
+
     trame4 = []
     trame4.append(2)
     trame4.append(18)
     trame4.append(0)
     assert jeu.parse_message(trame4) == (18, 0)
 
-    # Negative message ID
+    #  Negative message ID
     trame5 = []
     trame5.append(-5)
     trame5.append(18)
@@ -76,9 +84,3 @@ def test_parse_message():
     trame8.append(2.5)
     trame8.append(5.5)
     assert jeu.parse_message(trame8) == (2.5, 5.5)
-
-    #trame9 = []
-    #trame9.append(a)
-    #trame9.append(5)
-    #trame9.append(b)
-    #assert jeu.parse_message(trame9) == False
