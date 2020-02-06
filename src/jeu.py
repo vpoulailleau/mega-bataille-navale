@@ -16,7 +16,7 @@ class Jeu(QObject):
 # Défense :
     # A appeller dès que la carte de défense est modifiée
     @Signal
-    def tir_subit(sefl):
+    def tir_subit(self):
         pass
 
     # return true si un bateau est présent
@@ -45,15 +45,21 @@ class Jeu(QObject):
     @Slot(int, result = bool)
     def get_case_manque(index):
         return True
+
+    @Slot()
+    def simulate(self):
+        self.recevoir_tir(1, 2)
+
+
     def recevoir_tir(self, x, y):
         etage = 0
         etat_tir = False
         while not etat_tir and etage < 3:
             etage += 1
             etat_tir = self.carte_perso.check_ship(x, y, etage)
-            
-        self.tir_subit().emit()
-  
+
+        self.tir_subit.emit()
+
         return (etat_tir, etage)
 
     def parse_message(self, trame):
