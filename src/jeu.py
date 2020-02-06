@@ -1,6 +1,8 @@
-from carte import *
+from carte import Carte, Case, Navire
+
 
 class Jeu:
+    """Represente le jeu."""
 
     def __init__(self):
         self.carte_perso = Carte()
@@ -10,6 +12,8 @@ class Jeu:
         pass
 
     def recevoir_tir(self, x, y):
+        """Gere la reception d'un tir."""
+
         etage = 0
         etat_tir = False
         while not etat_tir and etage < 3:
@@ -18,10 +22,11 @@ class Jeu:
         return (etat_tir, etage)
 
     def parse_message(self, trame):
+        """Decoupe les trames reçues."""
         if trame[0] == 2:
             # Reception d'un tir
             x = trame[1]
             y = trame[2]
-            return (x,y)
+            return (x, y)
         else:
             return (None, None)

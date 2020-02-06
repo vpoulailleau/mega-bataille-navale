@@ -29,7 +29,6 @@ def test_recevoir_tir():
     assert jeu.recevoir_tir(4, 5)[0] == False
     assert jeu.recevoir_tir(11, 5) == (True, 1)
     assert jeu.recevoir_tir(4, 7) == (True, 2)
-    assert jeu.recevoir_tir(1, 8)[0] == True
 
 
 def test_parse_message():
