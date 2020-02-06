@@ -15,9 +15,11 @@ ColumnLayout{
         Layout.bottomMargin : 20
         id : stacklayout
         Repeater{
+            id : cartes
             model : 3
             GridLayout {
                 id : defGrid
+                property int testI : index
                 rowSpacing : 0
                 columnSpacing : 0
                 columns : 15
@@ -25,6 +27,7 @@ ColumnLayout{
                     model : 225
                     CaseDef {
                         num : index
+                        depth : parent.testI
                     }
                 }
             }
