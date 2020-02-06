@@ -3,7 +3,6 @@ import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.14
 
 GridLayout{
-    id : attaq
     rowSpacing : 0
     columnSpacing : 0
     Layout.alignment : Qt.alignHCenter | Qt.alignVCenter

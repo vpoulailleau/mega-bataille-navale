@@ -8,6 +8,7 @@ import "Defense"
 
 ApplicationWindow {
     visible: true
+    
     minimumWidth : mainLayout.implicitWidth
     minimumHeight : mainLayout.implicitHeight
 
@@ -29,10 +30,10 @@ ApplicationWindow {
         RowLayout{}
 
         CarteDefense{
-             focus : true
+            id : carteDef
+            focus : true
         }
 
-        RowLayout{}                        
-    }
-            
+        RowLayout{}           
+    }           
 }

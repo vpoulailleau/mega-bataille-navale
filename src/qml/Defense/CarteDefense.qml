@@ -2,6 +2,7 @@ import QtQuick 2.6
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.14
 
+
 RowLayout{
     ColumnLayout{
         Layout.margins : 20
