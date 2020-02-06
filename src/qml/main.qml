@@ -5,17 +5,28 @@ import QtQuick.Window 2.14
 
 import "Attaque"
 import "Defense"
+import "Page_connexion"
 
 ApplicationWindow {
     visible: true
+    
     minimumWidth : mainLayout.implicitWidth
     minimumHeight : mainLayout.implicitHeight
+    Connexion_Window{
 
+    }
     RowLayout{
         id : mainLayout
         Layout.margins : 20
         anchors.fill : parent
         spacing : 10
+		Button{
+			id: but_att
+			text: "Attaque "
+			onClicked: {
+				Jeu.simulate();
+			}
+		}
         RowLayout{}
         CarteAttaque{
             id : attaq
@@ -29,10 +40,10 @@ ApplicationWindow {
         RowLayout{}
 
         CarteDefense{
-             focus : true
+            id : carteDef
+            focus : true
         }
 
-        RowLayout{}                        
-    }
-            
+        RowLayout{}           
+    }           
 }

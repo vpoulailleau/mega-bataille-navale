@@ -2,12 +2,20 @@ import QtQuick.Layouts 1.14
 import QtQuick 2.14
 
 ColumnLayout{
-    property bool manque : !(num % 8)
-    property var touches: [num%2,num%5,num%7]
+    property var touches: [0,0,0]
     property int num
+    property bool manque : false
 
     Layout.fillWidth : true
     
+    Connections {
+        target : Jeu
+        onTir_feedback_received:{
+            touches = Jeu.get_case_attaque(num)
+            manque = Jeu.get_case_manque(num)
+        }
+    }
+
     Rectangle{
         id : rect
         height : 35

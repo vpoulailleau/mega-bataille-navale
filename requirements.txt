@@ -1,0 +1,2 @@
+pyside2==5.14.0
+coverage==5.0.3

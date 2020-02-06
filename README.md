@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/LavergneC/mega-bataille-navale/badge.svg)](https://coveralls.io/github/LavergneC/mega-bataille-navale)
+
 # Mega bataille navale
 
 ## Jeu
