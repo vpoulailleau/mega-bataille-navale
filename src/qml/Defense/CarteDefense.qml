@@ -8,6 +8,7 @@ RowLayout{
         ColumnLayout{}
         SwipeView {
             orientation : Qt.Vertical
+            interactive : false
             clip : true
             id : stacklayout
             Repeater{
