@@ -2,12 +2,12 @@ from carte import *
 from PySide2.QtCore import Slot, QObject, Signal, Property
 
 class Jeu(QObject):
-    
+
     def __init__(self):
         super(Jeu, self).__init__()
         self.carte_perso = Carte()
         self.carte_adversaire = Carte()
-    
+
     def placer_navire(self, x, y, z, sens, name):
         pass
 
@@ -49,9 +49,11 @@ class Jeu(QObject):
         etage = 0
         etat_tir = False
         while not etat_tir and etage < 3:
-            etat_tir = self.carte_perso.check_ship(x, y, etage)
             etage += 1
+            etat_tir = self.carte_perso.check_ship(x, y, etage)
+            
         self.tir_subit().emit()
+  
         return (etat_tir, etage)
 
     def parse_message(self, trame):

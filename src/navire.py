@@ -11,10 +11,8 @@ class Navire:
         for index, case in enumerate(self.cases):
             if case.x == x and case.y == y and case.z == z:
                 self.cases[index].impact = True
-                return True
-        return False    
-
+                return (case, True)
+        return (None, False)
 
     def set_position(self, x, y, z, sens):
         pass
-
