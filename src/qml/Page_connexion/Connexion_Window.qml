@@ -65,14 +65,14 @@ Window {
     }
     Ma_popup{
         id:pop
-        image:"qrc:/Images/attention.svg"
+        image:"../Images/attention.svg"
         message : "Veuillez vérifier les information rentrées ..."
         bouton: true
     }
 
     Ma_popup{
         id:popartie
-        back:"qrc:/Images/bateau.jpg"
+        back:"../Images/bateau.jpg"
         message : "En attente d'adversaire !! Préparez-vous à la bataille"
         bouton: false
         busyindi: true

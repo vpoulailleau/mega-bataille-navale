@@ -9,8 +9,6 @@ RowLayout{
 
     Layout.fillWidth: true
 
-    //b
-
     BusyIndicator{
         visible: displayBusy
         running: true
@@ -19,14 +17,14 @@ RowLayout{
 
         visible: !displayBusy && !tickState
         id: pasok
-        source: "qrc:/Images/mauvaiseinfo.svg"
+        source: "../Images/mauvaiseinfo.svg"
         sourceSize.width: 50
     }
     Image {
 
         visible: !displayBusy && tickState
         id: ok
-        source: "qrc:/Images/bonneinfo.svg"
+        source: "../Images/bonneinfo.svg"
         sourceSize.width: 50
     }
 }
