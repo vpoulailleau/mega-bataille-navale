@@ -5,13 +5,16 @@ import QtQuick.Window 2.14
 
 import "Attaque"
 import "Defense"
+import "Page_connexion"
 
 ApplicationWindow {
     visible: true
     
     minimumWidth : mainLayout.implicitWidth
     minimumHeight : mainLayout.implicitHeight
+    Connexion_Window{
 
+    }
     RowLayout{
         id : mainLayout
         Layout.margins : 20
