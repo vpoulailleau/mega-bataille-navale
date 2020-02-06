@@ -17,6 +17,13 @@ ApplicationWindow {
         Layout.margins : 20
         anchors.fill : parent
         spacing : 10
+		Button{
+			id: but_att
+			text: "Attaque "
+			onClicked: {
+				Jeu.simulate();
+			}
+		}
         RowLayout{}
         CarteAttaque{
             id : attaq
