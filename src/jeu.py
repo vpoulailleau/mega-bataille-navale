@@ -1,11 +1,11 @@
 from carte import *
 
 class Jeu:
-    
+
     def __init__(self):
         self.carte_perso = Carte()
         self.carte_adversaire = Carte()
-    
+
     def placer_navire(self, x, y, z, sens, name):
         pass
 
@@ -13,8 +13,8 @@ class Jeu:
         etage = 0
         etat_tir = False
         while not etat_tir and etage < 3:
-            etat_tir = self.carte_perso.check_ship(x, y, etage)
             etage += 1
+            etat_tir = self.carte_perso.check_ship(x, y, etage)
         return (etat_tir, etage)
 
     def parse_message(self, trame):
@@ -23,4 +23,5 @@ class Jeu:
             x = trame[1]
             y = trame[2]
             return (x,y)
-
+        else:
+            return (None, None)
