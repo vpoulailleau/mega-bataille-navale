@@ -1,7 +1,7 @@
 from navire import *
 
 class Carte:
-"""Représente une carte."""
+    """Représente une carte."""
 
     def __init__(self):
         """Définition d'une carte."""
