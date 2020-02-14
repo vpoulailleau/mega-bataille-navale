@@ -18,7 +18,7 @@
   * 3 destroyers 4×1
   * 3 torpilleurs 3×2
   * 2 sous-marins nucléaires 6×1
-    * À la destruction, il explose dans un rayon de 3 cases autour de lui, dans sa couche
+    * À la destruction, il explose dans un rayon de 3 cases autour de lui, dans sa couche (la zone impactée est le rectangle incluant les cases autour du sous-marin, et faisant 2*3 cases de plus en largeur que le sous-marin et 2*3 cases de plus en hauteur que le sous-marin)
   * 5 petits sous-marins 3×1
   * 2 mini sous-marins 2×1
 * Un sous-marin peut être placé sur n'importe quelle couche, y compris celle des bateaux
