@@ -103,3 +103,8 @@ Le client commence, il tire et reçoit ensuite une réponse du serveur, puis le 
 * Poetry
   * https://python-poetry.org/
   * https://python-poetry.org/docs/basic-usage/
+
+## Liens vers les réalisations
+
+* Groupe constitué de Samuel Huet, Thomas Coutant, Vincent Villedieux et Jean-Gabriel Massicot
+  * https://github.com/massicotjgab/mega-bataille-navale.git
